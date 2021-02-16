@@ -24,7 +24,6 @@ public class WeekOneExercisesPartOne {
     }
 
     @Test
-    @Disabled
     public void numberOfWholeSlicesFromTwoPizzasAndFourPeople() {
         int numberOfPeople = 4;
         int numberOfEightSlicePizzas = 2;
@@ -47,7 +46,7 @@ public class WeekOneExercisesPartOne {
     }
 
     private int divideUpEightSlicePizzasEvenly(int numberOfPizzas, int numberOfPeople) {
-        return 1;
+        return ((8*numberOfPizzas)/numberOfPeople);
     }
 
     private int determineLeftoverSlicesOfPizza(int numberOfPizzas, int numberOfPeople) {
