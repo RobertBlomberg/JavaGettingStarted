@@ -49,7 +49,8 @@ public class WeekOneExercisesPartOne {
     }
 
     private int determineLeftoverSlicesOfPizza(int numberOfPizzas, int numberOfPeople) {
-        return 1;
+
+        return ((8*numberOfPizzas)%numberOfPeople);
     }
 
     @Test
