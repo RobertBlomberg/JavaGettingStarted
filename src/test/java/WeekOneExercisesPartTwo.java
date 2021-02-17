@@ -10,7 +10,6 @@ public class WeekOneExercisesPartTwo {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    @Disabled
     public void bloodAlcoholLevelForAMale() {
         char gender = 'M';
         int weightInPounds = 185;
@@ -23,7 +22,6 @@ public class WeekOneExercisesPartTwo {
     }
 
     @Test
-    @Disabled
     public void bloodAlcoholLevelForAFemale() {
         char gender = 'F';
         int weightInPounds = 135;
@@ -58,6 +56,11 @@ public class WeekOneExercisesPartTwo {
     private float calculateBAC(char gender, int weightInPounds, int ouncesOfAlcoholConsumed, float hoursSinceLastDrink) {
         // TODO RESPONSE: In the PluralSight video, you learned of three ways to make decisions based on the value
         //   in the gender variable. Implement this method using one way, and describe how the other ways could work.
-        return 0.0f;
+
+        return (float) (((5.14 / weightInPounds) * ((gender == 'M'?.73:.66) * ouncesOfAlcoholConsumed)) - (hoursSinceLastDrink * 0.015));
+        /* Could have used an if-else statement to find the alcohol distribution ratio but would have had to have that defined prior to the formula.
+           Could have used a case statement to determine the alcohol distribution ratio, but it would have either been a case statement with two
+           cases or it would have duplicated all of the formula code, once for male and once for female.
+        **/
     }
 }
