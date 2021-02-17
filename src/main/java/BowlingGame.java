@@ -17,8 +17,8 @@ public class BowlingGame {
         // TODO RESPONSE: Why does the subscript need to start with zero?
         // Arrays are zero-based.
 
-        for(int roll : rolls){
-            score += roll;
+        for(int i = 0; i < rolls.length; i++){
+            score += rolls[i];
         }
         return score;
     }
