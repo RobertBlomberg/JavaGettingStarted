@@ -34,8 +34,8 @@ public class WeekTwoExercisePartOne {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-    @Disabled
     // TODO Response: Why did we start with this test?
+    // this is more of a scaffolding test to make sure things are hooked up?
     public void whenRollingAllGutterBallsScoreIsZero() {
         rollMany(20, 0);
 
@@ -45,8 +45,8 @@ public class WeekTwoExercisePartOne {
     }
 
     @Test
-    @Disabled
     // TODO Response:  If the above test works with open frames, why is this test necessary?
+    // the BowlingGame.java was a little more set up and was not just returning a hard-coded zero.  Good to test with actual numbers though.
     public void whenRollingOpenFrameScoreIsSumOfRolls() {
         rollMany(20, 1);
 
