@@ -48,7 +48,7 @@ public class WeekTwoExercisePartTwo {
 
     @Test
     public void sendingThreeShouldReturnStringFizz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: I returned Fizz if the number passed was a 3, which is the simplest change to make to get the test to pass.
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
@@ -62,7 +62,7 @@ public class WeekTwoExercisePartTwo {
 
     @Test
     public void sendingAnyMultipleOfThreeShouldReturnStringFizz() {
-        // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
+        // TODO Comment: I changed the if statement to use the modulus of 3, again the minimum to make the test pass.
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
 
@@ -75,8 +75,8 @@ public class WeekTwoExercisePartTwo {
     }
 
     @Test
-    @Disabled
-    public void sendingAnyMultipleOfFiveOfThreeShouldReturnStringBuzz() {
+
+    public void sendingAnyMultipleOfFiveShouldReturnStringBuzz() {
         // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
