@@ -57,7 +57,6 @@ public class WeekTwoExercisePartOne {
 
     // TODO CODE: Start here
     @Test
-    @Disabled
     public void whenRollingSpareFrameScoreIsTenPlusNextRoll() {
         bowlingGame.roll(3);
         bowlingGame.roll(7);
@@ -70,7 +69,6 @@ public class WeekTwoExercisePartOne {
     }
 
     @Test
-    @Disabled
     public void whenRollingStrikeFrameScoreIsTenPlusNextTwoRolls() {
         bowlingGame.roll(10);
         bowlingGame.roll(7);

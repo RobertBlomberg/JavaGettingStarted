@@ -17,9 +17,9 @@ public class WeekTwoExercisePartTwo {
     // TODO: remember to refactor after you have a green test (never refactor when you have a failing test)
 
     // TODO Response: Why would you never refactor if you had a failing test?
+    // If you have a failing test, you won't know if it's your changes or if those errors were there prior to your changes.
 
     @Test
-    @Disabled
     public void sendingOneShouldReturnStringOne(){
         // TODO Comment: replace this comment with a brief description of why you made the change you did in FizzBuzz.java
         // TODO: Implement the code to make this test pass
