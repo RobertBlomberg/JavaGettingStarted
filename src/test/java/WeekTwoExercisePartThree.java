@@ -52,7 +52,6 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
     public void sendingFridayTheThirteenthFromAnotherYearReturnsFalse() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
@@ -62,14 +61,13 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
     public void sendingTwentySixteenReturnsOnlyOneFridayTheThirteenth() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
-        LocalDate[] actual = unluckyDatesByYear(2019);
+        LocalDate[] actual = unluckyDatesByYear(2016);
         LocalDate[] expected = new LocalDate[]{
-                LocalDate.of(2019, 9, 13),
-                LocalDate.of(2019, 12, 13),
+                LocalDate.of(2016, 5, 13),
+                null,
                 null,
                 null,
                 null,
@@ -102,7 +100,14 @@ public class WeekTwoExercisePartThree {
 
     public LocalDate[] unluckyDatesByYear(int year) {
         LocalDate[] localDates = new LocalDate[12];
-
+        int index = 0;
+        for (int month = 1; month < 13; month++) {
+            if (isUnluckyDate(year, month, 13)) {
+                LocalDate unLuckyDate = LocalDate.of(year, month, 13);
+                localDates[index] = unLuckyDate;
+                index++;
+            }
+        }
         return localDates;
     }
 
