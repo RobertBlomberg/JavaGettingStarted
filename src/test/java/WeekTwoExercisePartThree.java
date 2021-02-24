@@ -1,8 +1,10 @@
 
+import java.time.DayOfWeek;
 import java.time.LocalDate;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
@@ -10,16 +12,16 @@ import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 /**
  * Friday the thirteenth is fabled to be an 'unlucky' day.  Implement the code below to
  * discover which thirteenth dates from any given year fall on a Friday.
- *
+ * <p>
  * Each test below has a @Disabled attribute that must be removed in order for that test
  * to run.
- *
+ * <p>
  * Implement each step in the simplest manner possible where all tests continue to pass.
- *
+ * <p>
  * Make a Git commit after implementing each test. Add only the minimum amount of code required
  * for each test case to make that test pass. This may innclude just putting in a literal value...
  * do not add any additional code.
- *
+ * <p>
  * Hint:  If you complete implementing a test and the next test passes w/o any changes to the
  * called function, you did too much and should start over from the previous test unless it's one
  * if the last two or three.  The final couple of tests are just for verification.
@@ -32,7 +34,7 @@ public class WeekTwoExercisePartThree {
     // TODO Response: Why would you never refactor if you had a failing test?
 
     @Test
-   public void sendingAnActualFridayTheThirteenthReturnsTrue() {
+    public void sendingAnActualFridayTheThirteenthReturnsTrue() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
         boolean actual = isUnluckyDate(2019, 9, 13);
@@ -41,7 +43,6 @@ public class WeekTwoExercisePartThree {
     }
 
     @Test
-    @Disabled
     public void sendingNotAFridayTheThirteenthDateReturnsFalse() {
         // TODO: Implement the code to make this test pass
         // TODO: don't forget to commit after passing the test
@@ -106,6 +107,11 @@ public class WeekTwoExercisePartThree {
     }
 
     public boolean isUnluckyDate(int year, int month, int day) {
-        return true;
+        if (day == 13) {
+            LocalDate dateInQuestion = LocalDate.of(year, month, day);
+            if (dateInQuestion.getDayOfWeek() == DayOfWeek.valueOf("FRIDAY"))
+                return true;
+        }
+        return false;
     }
 }
